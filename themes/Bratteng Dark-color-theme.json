@@ -452,8 +452,8 @@
 			}
 		},
 		{
-			"name": "Keyword (import, as, from)",
-			"scope": "keyword.control.module, keyword.control.import, keyword.control.as, keyword.control.from",
+			"name": "Keyword (import, as, from, export, default)",
+			"scope": "keyword.control.module, keyword.control.import, keyword.control.as, keyword.control.from, keyword.control.export, keyword.control.default",
 			"settings": {
 				"foreground": "#E5C07B"
 			}
@@ -467,10 +467,10 @@
 			}
 		},
 		{
-			"name": "Arrow function (js)",
-			"scope": "storage.type.function.arrow",
+			"name": "Async function (js)",
+			"scope": "storage.modifier.async",
 			"settings": {
-				"fontStyle": "",
+				"fontStyle": "italic",
 				"foreground": "#C678DD"
 			}
 		},
