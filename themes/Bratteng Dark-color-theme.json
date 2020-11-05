@@ -685,9 +685,9 @@
 		},
 		{
 			"name": "Library class/type",
-			"scope": "support.type, support.class",
+			"scope": "support.type, support.class, meta.type.annotation",
 			"settings": {
-				"fontStyle": "",
+				"fontStyle": "italic",
 				"foreground": "#E5C07B"
 			}
 		},
