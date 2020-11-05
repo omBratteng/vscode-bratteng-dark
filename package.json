@@ -1,0 +1,26 @@
+{
+  "name": "bratteng-dark",
+  "displayName": "Bratteng Dark",
+  "publisher": "omBratteng",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:omBratteng/VSCode-bratteng-dark.git"
+  },
+  "engines": {
+    "vscode": "^1.50.1"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Bratteng Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bratteng Dark-color-theme.json"
+      }
+    ]
+  }
+}
