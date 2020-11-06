@@ -8,8 +8,9 @@
     "type": "git",
     "url": "git@github.com:omBratteng/VSCode-bratteng-dark.git"
   },
+  "homepage": "https://github.com/omBratteng/VSCode-bratteng-dark",
   "engines": {
-    "vscode": "^1.50.1"
+    "vscode": "^1.20.0"
   },
   "categories": [
     "Themes"
