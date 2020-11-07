@@ -1,0 +1,239 @@
+colors:
+  # -----------------------------------------------------------------------------
+  # Base Colors
+  # -----------------------------------------------------------------------------
+  # Defaults for editor elements, will be used if not set by a specific component
+  errorForeground: _light-red
+  foreground: _foreground
+
+  # -----------------------------------------------------------------------------
+  # Activity Bar
+  # -----------------------------------------------------------------------------
+  # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
+  activityBar.background: _background
+  activityBar.foreground: _foreground
+  activityBarBadge.background: _blue
+  activityBarBadge.foreground: _background
+  # -----------------------------------------------------------------------------
+  # Badges
+  # -----------------------------------------------------------------------------
+  badge.background: _background
+  # -----------------------------------------------------------------------------
+  # ProgressBar
+  # -----------------------------------------------------------------------------
+  progressBar.background: _pink
+  # -----------------------------------------------------------------------------
+  # Buttons
+  # -----------------------------------------------------------------------------
+  button.background: _background-light
+  button.foreground: _foreground
+  button.hoverBackground: _light-midnight
+  # -----------------------------------------------------------------------------
+  # Diff View
+  # -----------------------------------------------------------------------------
+  diffEditor.insertedTextBackground: _diff-green
+  # diffEditor.insertedTextBorder: NONE
+  diffEditor.removedTextBackground: _diff-red
+  # diffEditor.removedTextBorder: NONE
+  # -----------------------------------------------------------------------------
+  # Merge Conflicts
+  # -----------------------------------------------------------------------------
+  merge.currentContentBackground: _merge-current-content
+  merge.currentHeaderBackground: _merge-current-header
+  merge.incomingContentBackground: _merge-incoming-content
+  merge.incomingHeaderBackground: _merge-incoming-header
+  # merge.border: NONE
+  # -----------------------------------------------------------------------------
+  # Editor
+  # -----------------------------------------------------------------------------
+  editor.background: _background
+  editor.findMatchBackground: "#42557b"
+  editor.findMatchBorder: "#457dff"
+  editor.findMatchHighlightBackground: "#314365"
+  editor.foreground: _foreground
+  editor.lineHighlightBackground: _black-rock
+  editor.selectionBackground: "#67769660"
+  editor.selectionHighlightBackground: _white-transparent
+  editor.selectionHighlightBorder: _highlight-border
+  editor.wordHighlightBackground: _highlight
+  editor.wordHighlightBorder: _highlight-border
+  editor.wordHighlightStrongBackground: _highlight
+  editor.wordHighlightStrongBorder: _highlight-border
+
+
+  editorBracketMatch.background: _steel-gray
+  editorBracketMatch.border: _steel-gray
+  editorCursor.foreground: _light-blue
+  editorRuler.foreground: _highlight
+  editorWhitespace.foreground: _highlight
+
+  # -----------------------------------------------------------------------------
+  # Widgets
+  # -----------------------------------------------------------------------------
+  # Widgets are feautures inside the main editor like snippets, autocomplete, in
+  # file find.
+  editorHoverWidget.background: _black-rock
+  editorSuggestWidget.selectedBackground: _background-light
+  editorWidget.background: _background
+  editorWidget.border: _background-light
+  # -----------------------------------------------------------------------------
+  # Overview Ruler
+  # -----------------------------------------------------------------------------
+  # The overview ruler is the thin bar at the far right of the editor, it has
+  # decorations for git status and linter warnings
+  editorOverviewRuler.addedForeground: _git-added
+  editorOverviewRuler.border: _transparent
+  editorOverviewRuler.deletedForeground: _git-removed
+  editorOverviewRuler.errorForeground: _error
+  # editorOverviewRuler.findMatchForeground: TODO
+  editorOverviewRuler.infoForeground: _info
+  editorOverviewRuler.modifiedForeground: _git-modified
+  # editorOverviewRuler.rangeHighlightForeground: TODO
+  # editorOverviewRuler.selectionHighlightForeground: TODO
+  editorOverviewRuler.warningForeground: _warning
+  # editorOverviewRuler.wordHighlightForeground: TODO
+  # editorOverviewRuler.wordHighlightStrongForeground: TODO
+  # -----------------------------------------------------------------------------
+  # Extensions
+  # -----------------------------------------------------------------------------
+  extensionButton.prominentBackground: _blue
+  extensionButton.prominentForeground: _white
+  extensionButton.prominentHoverBackground: _light-midnight
+  # -----------------------------------------------------------------------------
+  # Errors
+  # -----------------------------------------------------------------------------
+  # Themes the squiggly+borders underneath linter errors
+  editorError.border: _background
+  editorError.foreground: _error
+  editorWarning.border: _background
+  editorWarning.foreground: _warning
+  # -----------------------------------------------------------------------------
+  # Git Gutters
+  # -----------------------------------------------------------------------------
+  editorGutter.addedBackground: _git-added
+  editorGutter.deletedBackground: _git-removed
+  editorGutter.modifiedBackground: _git-modified
+  # -----------------------------------------------------------------------------
+  # Git Decoration
+  # -----------------------------------------------------------------------------
+  gitDecoration.ignoredResourceForeground: _git-ignored
+  # -----------------------------------------------------------------------------
+  # List
+  # -----------------------------------------------------------------------------
+  # List elements are inside the sidebar + command dropdown
+  # Mouse hover
+  list.hoverBackground: _background-light
+  list.hoverForeground: _foreground-light
+
+  # Keyboard focus
+  list.focusBackground: _background-light
+  # list.focusForeground: _foreground-light
+
+  # Selected item when the list container is in focus
+  list.activeSelectionBackground: _background-light
+  list.activeSelectionForeground: _foreground-light
+  # Selected item when the list container is NOT in focus
+  list.inactiveSelectionBackground: _background-light
+  list.inactiveSelectionForeground: _foreground-light
+  # The text that matches a search term inside of lists
+  list.highlightForeground: _light-blue
+
+
+  # -----------------------------------------------------------------------------
+  # Sidebar
+  # -----------------------------------------------------------------------------
+  # The side bar includes the file tree, search interface, git status and debug
+  # interfaces. It is located between the Activity Bar and the Editor.
+  sideBar.background: _background
+  sideBar.border: _background-light
+  sideBar.foreground: _foreground
+  sideBarSectionHeader.background: _background
+  # -----------------------------------------------------------------------------
+  # Scrollbar
+  # -----------------------------------------------------------------------------
+  # The .shadow shows under headers in the sideBar and editor when scrolled.
+  # The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
+  # overlays, so it's important to use transparent colors.
+  scrollbar.shadow: _charcoal
+  scrollbarSlider.activeBackground: _light-gray
+  scrollbarSlider.background: _gray-fade
+  scrollbarSlider.hoverBackground: _light-gray
+  # -----------------------------------------------------------------------------
+  # Status Bar
+  # -----------------------------------------------------------------------------
+  # Bar at bottom of editor with status updates
+  statusBar.background: _charcoal
+  statusBar.debuggingBackground: _pink
+  statusBar.debuggingForeground: _foreground
+  statusBar.foreground: _foreground
+  statusBar.noFolderBackground: _background
+  statusBar.noFolderForeground: _foreground
+
+  # statusBar.background: "#1d1f20"
+  # statusBar.debuggingBackground: "#7e0097"
+  # statusBar.debuggingBorder: "#66017a"
+  # statusBar.debuggingForeground: "#ffffff"
+  # statusBar.foreground: "#9da5b4"
+  # statusBar.noFolderBackground: "#1d1f20"
+  # statusBar.border: NONE
+  # statusBarItem.prominentBackground: NONE
+  # statusBarItem.prominentHoverBackground: NONE
+  # -----------------------------------------------------------------------------
+  # Title Bar
+  # -----------------------------------------------------------------------------
+  titleBar.activeBackground: _background
+  titleBar.activeForeground: _foreground
+  titleBar.inactiveBackground: _background
+  titleBar.inactiveForeground: _foreground
+  # -----------------------------------------------------------------------------
+  # Tabs
+  # -----------------------------------------------------------------------------
+  tab.activeBackground: _background
+  tab.activeBorder: _yellow
+  tab.activeForeground: _foreground-light
+  tab.border: _background
+  tab.hoverBackground: _background-light
+  tab.inactiveBackground: _background
+  tab.inactiveForeground: _foreground
+  # tab.unfocusedActiveBorder: NONE
+  tab.unfocusedHoverBackground: _background-light
+  # -----------------------------------------------------------------------------
+  # Terminal
+  # -----------------------------------------------------------------------------
+  terminal.ansiBlack: _black
+  terminal.ansiBlue: _blue
+  terminal.ansiBrightBlack: _light-gray
+  terminal.ansiBrightBlue: _light-blue
+  terminal.ansiBrightCyan: _light-cyan
+  terminal.ansiBrightGreen: _green
+  terminal.ansiBrightMagenta: _light-pink
+  terminal.ansiBrightRed: _light-red
+  terminal.ansiBrightWhite: _lighter-gray
+  terminal.ansiBrightYellow: _light-yellow
+  terminal.ansiCyan: _cyan
+  terminal.ansiGreen: _green
+  terminal.ansiMagenta: _pink
+  terminal.ansiRed: _red
+  terminal.ansiWhite: _foreground
+  terminal.ansiYellow: _yellow
+  # -----------------------------------------------------------------------------
+  # Settings
+  # -----------------------------------------------------------------------------
+  input.background: _input
+  settings.checkboxBackground: _input
+  settings.checkboxBorder: _input
+  settings.checkboxForeground: _foreground-light
+  settings.dropdownBackground: _input
+  settings.dropdownBorder: _input
+  settings.dropdownForeground: _foreground-light
+  settings.dropdownListBorder: _gray
+  settings.headerForeground: "#e7e7e7"
+  settings.modifiedItemIndicator: _light-blue
+  settings.numberInputBackground: _input
+  settings.numberInputForeground: "#cccccc"
+  settings.textInputBackground: _input
+  settings.textInputForeground: "#cccccc"
+  # -----------------------------------------------------------------------------
+  # Misc
+  # -----------------------------------------------------------------------------
+  textLink.foreground: _light-blue

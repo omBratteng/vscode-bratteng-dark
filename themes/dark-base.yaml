@@ -1,0 +1,332 @@
+$schema: vscode://schemas/color-theme
+author: Ole-Martin Bratteng
+name: Bratteng Dark
+colorSpaceName: sRGB
+semanticHighlighting: true
+semanticTokenColors:
+  newOperator: "#C586C0"
+  stringLiteral: "#ce9178"
+  customLiteral: "#DCDCAA"
+  numberLiteral: "#b5cea8"
+tokenColors:
+
+
+# -----------------------------------------------------------------------------
+# Comments
+# -----------------------------------------------------------------------------
+# Generic <comment> matches
+- scope: comment
+  settings:
+    foreground: _light-midnight
+    fontStyle: italic
+
+# -----------------------------------------------------------------------------
+# Keywords
+# -----------------------------------------------------------------------------
+# Generic <keyword> matches
+# - scope: keyword
+#   settings:
+#     foreground: _light-yellow
+# 1. Language features like: import, return, if, else
+# 2. `new` keyword
+# - scope: keyword.control, keyword.operator.new
+#   settings:
+#     foreground: _light-yellow
+
+# Make operators light gray by default
+# - scope: keyword.operator
+#   settings:
+#     foreground: _foreground
+# Make logical operators light yellow, eg ||, ===
+# - scope: keyword.operator.logical, keyword.operator.comparison
+#   settings:
+#     foreground: _cyan
+# Make Rust operators pink: &, ::, =>, etc.
+# - scope: keyword.operator.misc, keyword.operator.sigil
+#   settings:
+#     foreground: _light-yellow
+
+# -----------------------------------------------------------------------------
+# Storage
+# -----------------------------------------------------------------------------
+# Generic <storage> matches
+# - scope: storage
+#   settings:
+#     foreground: _pink
+
+# - scope: storage.type.cs
+#   settings:
+#     foreground: _cyan
+
+# -----------------------------------------------------------------------------
+# Constants
+# -----------------------------------------------------------------------------
+# Generic <constant> matches
+# - scope: constant
+#   settings:
+#     foreground: _yellow
+# Makes true/false booleans, null, undefined blue
+# - scope: constant.language
+#   settings:
+#     fontStyle: italic
+# Regex, string escape `\`
+# - scope: constant.character.escape
+#   settings:
+#     foreground: _light-blue
+
+# -----------------------------------------------------------------------------
+# Variables && Parameters
+# -----------------------------------------------------------------------------
+# Generic <variable> matches
+# - scope: variable
+#   settings:
+#     foreground: _foreground
+# Function parameters
+# - scope: variable.parameter
+#   settings:
+#     foreground: _contrast-gray
+#     # fontStyle: italic
+
+# Destructuring assignment variables
+# - scope: meta.object-binding-pattern-variable.js variable
+#   settings:
+#     foreground: _light-yellow
+# Special treatment for CONSTANT variables and this, variable interpolation matches?
+# - scope: variable.other.constant, variable.language.this, variable.interpolation
+#   settings:
+#     foreground: _yellow
+
+# -----------------------------------------------------------------------------
+# Objects
+# -----------------------------------------------------------------------------
+# Matches when an object is accessed.
+# - scope: variable.other.object
+#   settings:
+#       foreground: _light-red
+# The accessed property match
+# - scope: variable.other.property
+#   settings:
+#     foreground: _foreground
+
+# -----------------------------------------------------------------------------
+# Invalid
+# -----------------------------------------------------------------------------
+# - scope: invalid.illegal
+#   settings:
+#     border-bottom: 1px dashed rgba(255, 44, 109, 0.5)
+# - scope: invalid.deprecated
+#   settings:
+#     background-foreground: rgba(255, 44, 109, 0.62)
+
+# -----------------------------------------------------------------------------
+# Strings
+# -----------------------------------------------------------------------------
+# Generic string match
+# - scope: string
+#   settings:
+#     foreground: _green
+
+# -----------------------------------------------------------------------------
+# Punctuation
+# -----------------------------------------------------------------------------
+# Template string ${}
+# - scope: punctuation.definition.template-expression
+#   settings:
+#     foreground: _light-yellow
+
+# -----------------------------------------------------------------------------
+# Support
+# -----------------------------------------------------------------------------
+# Generic support match
+# - scope: support
+#   settings:
+#     foreground: _light-blue
+# Matches a Class reference when referenced later
+# - scope: support.class
+#   settings:
+#     foreground: _light-blue
+# Matches: MODULE, MODULE.EXPORTS
+# - scope: support.type.object.module.js
+#   settings:
+#     foreground: _pink
+# Matches: console.<LOG>
+# - scope: support.function
+#   settings:
+#     foreground: _light-blue
+# - scope: support.class.builtin
+#   settings:
+#     foreground: _light-yellow
+
+# -----------------------------------------------------------------------------
+# Entities
+# -----------------------------------------------------------------------------
+# Function names
+# - scope: entity.name.function
+#   settings:
+#     foreground: _light-blue
+# Class extensions: eg extends `Component`
+# - scope: entity.other.inherited-class
+#   settings:
+#     foreground: _light-pink
+# YAML keys
+# - scope: entity.name.tag.yaml
+#   settings:
+#     foreground: _light-yellow
+
+# -----------------------------------------------------------------------------
+# Meta
+# -----------------------------------------------------------------------------
+# JS Class/Method decorators -> @ punctuation is yellow
+# - scope: meta.decorator punctuation.decorator
+#   settings:
+#     foreground: _light-yellow
+# JS Class/Method decorators -> blue function name
+# - scope: meta.decorator variable
+#   settings:
+#     foreground: _light-blue
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+# Docker file `FROM`
+# - scope: keyword.other.special-method
+#   settings:
+#     foreground: _light-blue
+
+# -----------------------------------------------------------------------------
+# Styles (CSS/SCSS/LESS)
+# -----------------------------------------------------------------------------
+# Expressions like @import
+# - scope: keyword.control.at-rule
+#   settings:
+#     foreground: _pink
+# Style !important declarations
+# - scope: keyword.other.important
+#   settings:
+#     foreground: _light-red
+# - scope: variable.interpolation
+#   settings:
+#     foreground: _pink
+
+# -----------------------------------------------------------------------------
+# Name of type (struct, class, etc.)
+# -----------------------------------------------------------------------------
+# Generic name of type match
+# - scope: entity.name.type
+#   settings:
+#     foreground: _green
+#     fontStyle: italic
+
+
+- name: String
+  scope:
+    - string
+  settings:
+    foreground: _green
+- name: JSON Property
+  scope:
+    - meta.structure.dictionary.json
+    - support.type.property-name
+  settings:
+    foreground: "#E06C75"
+- name: JSON String
+  scope:
+    - meta.structure.dictionary.json
+    - string.quoted.double.json
+  settings:
+    foreground: _green
+- name: JSON Links
+  scope:
+    - meta.structure.dictionary.json
+    - string.quoted.double.detected-link
+  settings:
+    foreground: "#C678DD"
+- name: Types declaration and references
+  scope:
+    - meta.return-type
+    - support.class
+    - support.type
+    - entity.name.type
+    - entity.name.namespace
+    - entity.other.attribute
+    - entity.name.scope-resolution
+    - entity.name.class
+    - storage.type.numeric.go
+    - storage.type.byte.go
+    - storage.type.boolean.go
+    - storage.type.string.go
+    - storage.type.uintptr.go
+    - storage.type.error.go
+    - storage.type.rune.go
+    - storage.type.cs
+    - storage.type.generic.cs
+    - storage.type.modifier.cs
+    - storage.type.variable.cs
+    - storage.type.annotation.java
+    - storage.type.generic.java
+    - storage.type.java
+    - storage.type.object.array.java
+    - storage.type.primitive.array.java
+    - storage.type.primitive.java
+    - storage.type.token.java
+    - storage.type.groovy
+    - storage.type.annotation.groovy
+    - storage.type.parameters.groovy
+    - storage.type.generic.groovy
+    - storage.type.object.array.groovy
+    - storage.type.primitive.array.groovy
+    - storage.type.primitive.groovy
+  settings:
+    fontStyle: ""
+    foreground: "#E5C07B"
+- name: Types declaration and references, TS grammar specific
+  scope:
+    - meta.type.cast.expr
+    - meta.type.new.expr
+    - support.constant.math
+    - support.constant.dom
+    - support.constant.json
+    - entity.other.inherited-class
+  settings:
+    fontStyle: italic
+    foreground: "#E5C07B"
+- name: Storage type
+  scope: storage.type
+  settings:
+    fontStyle: italic
+    foreground: "#C678DD"
+- name: Keyword (new, if, return)
+  scope:
+    - entity.name.operator
+    - keyword.control
+    - keyword.operator.delete
+    - keyword.operator.module
+    - keyword.operator.new
+    - keyword.other.operator
+    - keyword.other.using
+    - variable.language.super
+  settings:
+    foreground: "#C678DD"
+- name: Keyword (import, as, from, export, default)
+  scope:
+    - keyword.control.as
+    - keyword.control.default
+    - keyword.control.export
+    - keyword.control.from
+    - keyword.control.import
+    - keyword.control.module
+  settings:
+    foreground: "#E5C07B"
+- name: Numbers and Built-in Constants
+  scope:
+    - constant.numeric
+    - constant.language
+    - markdown.python.constant.numeric
+    - constant.boolean
+  settings:
+    foreground: "#D19A66"
+- name: User-defined constant
+  scope:
+    - constant.character
+  settings:
+    foreground: "#56B6C2"
