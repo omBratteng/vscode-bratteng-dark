@@ -2,28 +2,29 @@ const chokidar = require('chokidar')
 const { writeFile, readFileSync } = require('fs')
 const yaml = require('js-yaml')
 
+const loadYaml = (fileName) =>
+	yaml.safeLoad(readFileSync(`themes/${fileName}.yaml`, 'utf-8'))
+
+const log = console.log.bind(console)
+const watcher = chokidar.watch('themes', {
+	ignored: /^\./,
+	persistent: true,
+})
+
 const build = () => {
 	// Panda theme color definition
-	const themeColors = yaml.safeLoad(
-		readFileSync('themes/colors.yaml', 'utf-8'),
-	)
+	const themeColors = loadYaml('colors')
 	// Base has the syntax tokens applicable across multiple languages
-	let base = yaml.safeLoad(readFileSync('themes/dark-base.yaml', 'utf-8'))
+	let base = loadYaml('dark-base')
 	// Additional theme definitions to combine with base syntax token styles
-	const workbench = yaml.safeLoad(
-		readFileSync('themes/workbench.yaml', 'utf-8'),
-	)
-	const template = yaml.safeLoad(
-		readFileSync('themes/template.yaml', 'utf-8'),
-	)
-	const markdown = yaml.safeLoad(
-		readFileSync('themes/markdown.yaml', 'utf-8'),
-	)
-	const js = yaml.safeLoad(readFileSync('themes/js.yaml', 'utf-8'))
-	const html = yaml.safeLoad(readFileSync('themes/html.yaml', 'utf-8'))
-	const css = yaml.safeLoad(readFileSync('themes/css.yaml', 'utf-8'))
-	const regex = yaml.safeLoad(readFileSync('themes/regex.yaml', 'utf-8'))
-	const jsdoc = yaml.safeLoad(readFileSync('themes/jsdoc.yaml', 'utf-8'))
+	const workbench = loadYaml('workbench')
+	const template = loadYaml('template') || {}
+	const markdown = loadYaml('markdown') || {}
+	const js = loadYaml('js') || {}
+	const html = loadYaml('html') || {}
+	const css = loadYaml('css') || {}
+	const regex = loadYaml('regex') || {}
+	const jsdoc = loadYaml('jsdoc') || {}
 
 	// Merge workbench styles
 	Object.assign(base, workbench)
@@ -59,11 +60,11 @@ const build = () => {
 	})
 }
 
-build()
-
-const watcher = chokidar.watch('themes', {
-	ignored: /^\./,
-	persistent: true,
-})
-
-watcher.on('change', () => build())
+watcher
+	.on('ready', () => {
+		log('Initial scan complete. Ready for changes')
+		build()
+	})
+	.on('change', () => {
+		build()
+	})
