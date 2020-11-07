@@ -1,0 +1,122 @@
+$schema: vscode://schemas/color-theme
+name: Bratteng Dark
+type: dark
+include: ./dark-defaults.json
+tokenColors:
+  - name: String
+    scope:
+      - string
+    settings:
+      foreground: "#98C379"
+  - name: JSON Property
+    scope:
+      - meta.structure.dictionary.json
+      - support.type.property-name
+    settings:
+      foreground: "#E06C75"
+  - name: JSON String
+    scope:
+      - meta.structure.dictionary.json
+      - string.quoted.double.json
+    settings:
+      foreground: "#98C379"
+  - name: JSON Links
+    scope:
+      - meta.structure.dictionary.json
+      - string.quoted.double.detected-link
+    settings:
+      foreground: "#C678DD"
+  - name: Types declaration and references
+    scope:
+      - meta.return-type
+      - support.class
+      - support.type
+      - entity.name.type
+      - entity.name.namespace
+      - entity.other.attribute
+      - entity.name.scope-resolution
+      - entity.name.class
+      - storage.type.numeric.go
+      - storage.type.byte.go
+      - storage.type.boolean.go
+      - storage.type.string.go
+      - storage.type.uintptr.go
+      - storage.type.error.go
+      - storage.type.rune.go
+      - storage.type.cs
+      - storage.type.generic.cs
+      - storage.type.modifier.cs
+      - storage.type.variable.cs
+      - storage.type.annotation.java
+      - storage.type.generic.java
+      - storage.type.java
+      - storage.type.object.array.java
+      - storage.type.primitive.array.java
+      - storage.type.primitive.java
+      - storage.type.token.java
+      - storage.type.groovy
+      - storage.type.annotation.groovy
+      - storage.type.parameters.groovy
+      - storage.type.generic.groovy
+      - storage.type.object.array.groovy
+      - storage.type.primitive.array.groovy
+      - storage.type.primitive.groovy
+    settings:
+      fontStyle: ""
+      foreground: "#E5C07B"
+  - name: Types declaration and references, TS grammar specific
+    scope:
+      - meta.type.cast.expr
+      - meta.type.new.expr
+      - support.constant.math
+      - support.constant.dom
+      - support.constant.json
+      - entity.other.inherited-class
+    settings:
+      fontStyle: italic
+      foreground: "#E5C07B"
+  - name: Storage type
+    scope: storage.type
+    settings:
+      fontStyle: italic
+      foreground: "#C678DD"
+  - name: Keyword (new, if, return)
+    scope:
+      - entity.name.operator
+      - keyword.control
+      - keyword.operator.delete
+      - keyword.operator.module
+      - keyword.operator.new
+      - keyword.other.operator
+      - keyword.other.using
+      - variable.language.super
+    settings:
+      foreground: "#C678DD"
+  - name: Keyword (import, as, from, export, default)
+    scope:
+      - keyword.control.as
+      - keyword.control.default
+      - keyword.control.export
+      - keyword.control.from
+      - keyword.control.import
+      - keyword.control.module
+    settings:
+      foreground: "#E5C07B"
+  - name: Numbers and Built-in Constants
+    scope:
+      - constant.numeric
+      - constant.language
+      - markdown.python.constant.numeric
+      - constant.boolean
+    settings:
+      foreground: "#D19A66"
+  - name: User-defined constant
+    scope:
+      - constant.character
+    settings:
+      foreground: "#56B6C2"
+semanticTokenColors:
+  newOperator: "#C586C0"
+  stringLiteral: "#ce9178"
+  customLiteral: "#DCDCAA"
+  numberLiteral: "#b5cea8"
