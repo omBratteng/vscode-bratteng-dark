@@ -4,6 +4,7 @@
   "publisher": "omBratteng",
   "description": "",
   "version": "1.0.2",
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "git@github.com:omBratteng/VSCode-bratteng-dark.git"
@@ -15,13 +16,20 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "start": "node index.js"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Bratteng Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/Bratteng Dark-color-theme.json"
+        "path": "./dist/Bratteng-dark.json"
       }
     ]
+  },
+  "devDependencies": {
+    "chokidar": "^3.4.3",
+    "js-yaml": "^3.14.0"
   }
 }
