@@ -5,19 +5,32 @@
   "description": "",
   "version": "1.0.2",
   "license": "BSD-3-Clause",
+  "author": {
+    "name": "Ole-Martin Bratteng",
+    "email": "ole-martin@bratteng.solutions",
+    "url": "https://bratteng.solutions"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:omBratteng/VSCode-bratteng-dark.git"
   },
   "homepage": "https://github.com/omBratteng/VSCode-bratteng-dark",
   "engines": {
-    "vscode": "^1.20.0"
+    "vscode": "^1.42.0"
   },
+  "keywords": [
+    "theme",
+    "dark"
+  ],
   "categories": [
     "Themes"
   ],
   "scripts": {
-    "start": "node index.js"
+    "package": "vsce package --out bratteng-dark.vsix --yarn",
+    "lint": "eslint src/ --report-unused-disable-directives",
+    "watch": "ts-node-dev --respawn --quiet src",
+    "build": "ts-node-dev src",
+    "compile": "tsc --pretty"
   },
   "contributes": {
     "themes": [
@@ -29,7 +42,17 @@
     ]
   },
   "devDependencies": {
-    "chokidar": "^3.4.3",
-    "js-yaml": "^3.14.0"
+    "@types/chroma-js": "^2.1.0",
+    "@types/node": "^14.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "chroma-js": "^2.1.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.5",
+    "vsce": "^1.81.1"
   }
 }
