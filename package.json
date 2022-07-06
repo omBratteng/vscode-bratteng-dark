@@ -1,6 +1,6 @@
 {
-  "name": "bratteng-dark",
-  "displayName": "Bratteng Dark",
+  "name": "bratteng-dark-old",
+  "displayName": "Bratteng Dark Old",
   "publisher": "omBratteng",
   "description": "",
   "version": "1.0.2",
@@ -17,7 +17,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Bratteng Dark",
+        "label": "Bratteng Dark Old",
         "uiTheme": "vs-dark",
         "path": "./themes/Bratteng Dark-color-theme.json"
       }
