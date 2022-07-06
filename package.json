@@ -21,6 +21,22 @@
         "uiTheme": "vs-dark",
         "path": "./themes/Bratteng Dark-color-theme.json"
       }
+    ],
+    "languages": [
+      {
+        "id": "vimrc",
+        "extensions": [
+          ".vimrc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vimrc",
+        "scopeName": "source.vimrc",
+        "path": "./syntaxes/vimrc.tmLanguage.json"
+      }
     ]
   }
 }
